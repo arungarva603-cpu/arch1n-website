@@ -3,120 +3,253 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arch1n.in | ARUN GARVA</title>
-<meta name="description" content="ARUN GARVA - Professional Website Developer, Video Editor & Logo Designer from Bhuj, Kutch. Premium websites & branding solutions.">
-<meta name="keywords" content="ARUN GARVA, Arch1n, website development, video editing, logo design, premium services">
-<meta name="author" content="ARUN GARVA | Arch1n.in">
-<style>
-body {margin:0;font-family:Arial,sans-serif;background:#000;color:#fff;scroll-behavior:smooth;}
-header {position:fixed;top:0;left:0;width:100%;background:#111;padding:20px;z-index:1000;display:flex;justify-content:space-between;align-items:center;}
-header nav a {color:#fff;text-decoration:none;margin:0 15px;font-weight:bold;transition:0.3s;}
-header nav a:hover{background:linear-gradient(90deg,#ff9900,#ff6600);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-section {padding:100px 20px;text-align:center;}
-.hero {background:linear-gradient(135deg,#ff9900,#ff6600);padding:150px 20px;animation:gradientMove 15s infinite alternate;position:relative;}
-.hero h1 {font-size:50px;margin-bottom:20px;display:inline-block;}
-.hero p {font-size:20px;color:#eee;margin-bottom:20px;}
-.services{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-top:40px;}
-.card{background:#111;padding:20px;border-radius:15px;width:220px;box-shadow:0 0 20px rgba(255,165,0,0.4);transition:0.3s;}
-.card:hover{transform:scale(1.05);}
-.portfolio{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-top:40px;}
-.portfolio img{width:250px;border-radius:10px;cursor:pointer;transition:0.3s;}
-.portfolio img:hover{transform:scale(1.05);}
-.testimonials{margin-top:50px;}
-.testimonial-slide{display:none;font-style:italic;color:#ccc;}
-.testimonial-slide.active{display:block;}
-.contact .btn{padding:15px 30px;background:gold;color:#000;border:none;border-radius:10px;font-size:18px;cursor:pointer;margin-top:20px;transition:0.2s;}
-.contact .btn:hover{transform:scale(1.1);background:orange;}
-footer{padding:20px;text-align:center;background:#111;color:gray;margin-top:50px;}
-.floating-wp{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;font-size:30px;text-decoration:none;box-shadow:0 0 15px rgba(0,0,0,0.3);z-index:1000;}
-.floating-wp:hover{transform:scale(1.1);}
-@media(max-width:768px){.services,.portfolio{flex-direction:column;align-items:center;}}
+<title>ARCH1N | Premium Digital Brand</title>
 
-/* Hero typing animation */
-.typing {border-right: .15em solid #fff;white-space:nowrap;overflow:hidden;}
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
+body{background:#0b0b0f;color:white;scroll-behavior:smooth;}
+a{text-decoration:none;color:white}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+background:linear-gradient(90deg,#ffb347,#ff7b00);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav a{
+margin:0 15px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#ff9d00;
+}
+
+section{
+padding:120px 8%;
+text-align:center;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:radial-gradient(circle at top,#1a1a2e,#0b0b0f);
+}
+
+.hero h1{
+font-size:55px;
+background:linear-gradient(90deg,#ffb347,#ff7b00);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#aaa;
+margin-bottom:30px;
+}
+
+.btn{
+padding:14px 35px;
+background:linear-gradient(90deg,#ffb347,#ff7b00);
+border:none;
+border-radius:30px;
+color:black;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px #ff7b00;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:#141421;
+padding:30px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #ff7b00;
+}
+
+.portfolio{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.portfolio img{
+width:100%;
+border-radius:10px;
+transition:0.3s;
+}
+
+.portfolio img:hover{
+transform:scale(1.05);
+}
+
+.testimonial{
+margin-top:30px;
+color:#bbb;
+font-style:italic;
+}
+
+footer{
+padding:20px;
+text-align:center;
+background:#111;
+color:#777;
+}
+
+.floating-wp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+color:white;
+text-decoration:none;
+box-shadow:0 0 15px black;
+}
+
+.loading-screen{
+position:fixed;
+width:100%;
+height:100%;
+background:#0b0b0f;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:2000;
+}
+
+.loading-screen h2{
+background:linear-gradient(90deg,#ffb347,#ff7b00);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hidden{display:none;}
 </style>
 </head>
+
 <body>
 
+<div class="loading-screen" id="loader">
+<h2>ARCH1N</h2>
+<p style="color:#777;">Loading...</p>
+</div>
+
 <header>
-<div>ARCH1N.IN</div>
+<div class="logo">ARCH1N</div>
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#portfolio">Portfolio</a>
-<a href="#testimonials">Testimonials</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <section class="hero" id="home">
-<h1 class="typing" id="typing-text"></h1>
-<p>Website Developer | Video Editor | Logo Designer | Bhuj / Kutch</p>
-<button class="btn" onclick="window.location.href='https://wa.me/9198258608'">Contact on WhatsApp</button>
+<h1>Premium Digital Solutions</h1>
+<p>Website Developer | Video Editor | Logo Designer</p>
+<button class="btn" onclick="window.location.href='https://wa.me/9198258608'">
+Contact on WhatsApp
+</button>
 </section>
 
 <section id="about">
-<h2>About Me</h2>
-<p>I am ARUN GARVA, a professional website developer, video editor and logo designer from Bhuj, Kutch. I create premium websites and branding solutions for clients worldwide.</p>
+<h2>About ARCH1N</h2>
+<p style="color:#aaa;margin-top:20px;">
+ARCH1N is a premium digital brand delivering high-converting websites,
+professional video editing and powerful logo designs.
+</p>
 </section>
 
 <section id="services">
 <h2>Services</h2>
 <div class="services">
-<div class="card"><h3>Website Development</h3><p>High-converting, responsive websites</p></div>
-<div class="card"><h3>Video Editing</h3><p>Instagram, YouTube & Social Media Editing</p></div>
-<div class="card"><h3>Logo Design</h3><p>Premium logos to make your brand stand out</p></div>
+<div class="card">
+<h3>Website Development</h3>
+<p style="color:#aaa;">Modern responsive high-converting websites.</p>
+</div>
+<div class="card">
+<h3>Video Editing</h3>
+<p style="color:#aaa;">Instagram, YouTube & Ads editing.</p>
+</div>
+<div class="card">
+<h3>Logo Design</h3>
+<p style="color:#aaa;">Premium brand identity design.</p>
+</div>
 </div>
 </section>
 
 <section id="portfolio">
 <h2>Portfolio</h2>
 <div class="portfolio">
-<img src="https://via.placeholder.com/250x150" alt="Project 1">
-<img src="https://via.placeholder.com/250x150" alt="Project 2">
-<img src="https://via.placeholder.com/250x150" alt="Project 3">
+<img src="https://via.placeholder.com/400x250">
+<img src="https://via.placeholder.com/400x250">
+<img src="https://via.placeholder.com/400x250">
 </div>
 </section>
 
-<section id="testimonials" class="testimonials">
-<h2>Testimonials</h2>
-<p class="testimonial-slide active">"Amazing work! Highly recommend ARUN GARVA." – Client A</p>
-<p class="testimonial-slide">"Professional and fast delivery!" – Client B</p>
+<section id="contact">
+<h2>Contact</h2>
+<p class="testimonial">"Let’s build something powerful together."</p>
+<button class="btn" onclick="window.location.href='https://wa.me/9198258608'">
+Start Project
+</button>
 </section>
 
-<section id="contact" class="contact">
-<h2>Contact Me</h2>
-<button class="btn" onclick="window.location.href='https://wa.me/9198258608'">Contact on WhatsApp</button>
-</section>
-
-<a href="https://wa.me/9198258608" class="floating-wp" target="_blank">📱</a>
+<a href="https://wa.me/9198258608" class="floating-wp">📱</a>
 
 <footer>
-© 2026 Arch1n.in | SSL Secure & All Rights Reserved
+© 2026 ARCH1N | Premium Brand | SSL Secure
 </footer>
 
 <script>
-// Hero typing animation
-const text = "ARUN GARVA";
-let i = 0;
-let speed = 150;
-function typeWriter(){
-if(i < text.length){
-document.getElementById("typing-text").innerHTML += text.charAt(i);
-i++;
-setTimeout(typeWriter,speed);
-}}
-typeWriter();
-
-// Testimonials slider
-let slides = document.querySelectorAll('.testimonial-slide');
-let current = 0;
-setInterval(()=> {
-slides[current].classList.remove('active');
-current = (current+1)%slides.length;
-slides[current].classList.add('active');
-},4000);
+window.onload = function(){
+document.getElementById("loader").classList.add("hidden");
+}
 </script>
 
 </body>
