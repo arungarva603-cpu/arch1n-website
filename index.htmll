@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARCH1N.IN</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background: linear-gradient(135deg,#1a0f0a,#000000);
+color:white;
+}
+
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav h2{
+color:#ff9900;
+letter-spacing:2px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#ff9900;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:100px 20px;
+background: linear-gradient(45deg,#2a1208,#ff6600,#000);
+}
+
+.hero h1{
+font-size:60px;
+background: linear-gradient(45deg,#ffd700,#ff6600);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+margin-top:15px;
+opacity:0.8;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 40px;
+border-radius:40px;
+background:linear-gradient(45deg,#ff6600,#ffd700);
+color:white;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 10px 30px rgba(255,140,0,0.5);
+transition:0.4s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+/* SECTION */
+section{
+padding:80px 8%;
+}
+
+h2{
+margin-bottom:30px;
+border-bottom:2px solid #ff6600;
+display:inline-block;
+padding-bottom:5px;
+}
+
+/* SERVICES */
+.services{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+flex:1;
+min-width:250px;
+background:#111;
+padding:30px;
+border-radius:15px;
+transition:0.4s;
+border:1px solid rgba(255,140,0,0.2);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(255,140,0,0.4);
+}
+
+/* PORTFOLIO */
+.portfolio{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.portfolio img{
+width:100%;
+max-width:350px;
+border-radius:15px;
+transition:0.4s;
+}
+
+.portfolio img:hover{
+transform:scale(1.05);
+}
+
+/* TESTIMONIAL */
+.testimonial{
+text-align:center;
+font-style:italic;
+opacity:0.8;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px;
+background:#000;
+opacity:0.6;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>ARCH1N.IN</h2>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h1>ARCH1N</h1>
+<p>Website Developer | Video Editor | Logo Designer | Bhuj, Kutch</p>
+<a href="#" class="btn">Contact on WhatsApp</a>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<p>I am ARUN GARVA, a professional website developer and designer delivering premium digital solutions worldwide.</p>
+</section>
+
+<section id="services">
+<h2>My Services</h2>
+<div class="services">
+<div class="card">
+<h3>Website Development</h3>
+<p>High converting responsive websites.</p>
+</div>
+<div class="card">
+<h3>Video Editing</h3>
+<p>Instagram, YouTube & Social Media edits.</p>
+</div>
+<div class="card">
+<h3>Logo Design</h3>
+<p>Premium brand identity designs.</p>
+</div>
+</div>
+</section>
+
+<section id="portfolio">
+<h2>Portfolio</h2>
+<div class="portfolio">
+<img src="https://picsum.photos/400/250?1">
+<img src="https://picsum.photos/400/250?2">
+<img src="https://picsum.photos/400/250?3">
+</div>
+</section>
+
+<section>
+<h2>Client Testimonials</h2>
+<p class="testimonial">"Amazing work! Highly recommend ARCH1N." – Client A</p>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+<a href="#" class="btn">Contact on WhatsApp</a>
+</section>
+
+<footer>
+© 2026 Arch1n.in | All Rights Reserved
+</footer>
+
+</body>
+  </html>
