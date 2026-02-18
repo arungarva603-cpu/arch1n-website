@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARCH1N.IN</title>
+<title>ARCH1N.IN | Arun Garva - Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
+:root {
+    --primary-gold: #ffd700;
+    --accent-orange: #ff6600;
+    --dark-bg: #0a0a0a;
+    --card-bg: #151515;
+}
+
 *{
 margin:0;
 padding:0;
@@ -17,8 +25,9 @@ scroll-behavior:smooth;
 }
 
 body{
-background: linear-gradient(135deg,#1a0f0a,#000000);
+background: var(--dark-bg);
 color:white;
+overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -26,17 +35,18 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
+padding:15px 8%;
+background:rgba(0,0,0,0.8);
+backdrop-filter:blur(15px);
 position:sticky;
 top:0;
 z-index:1000;
+border-bottom: 1px solid rgba(255,102,0,0.2);
 }
 
-/* LOGO */
 .logo{
 height:50px;
+filter: drop-shadow(0 0 5px var(--primary-gold));
 }
 
 nav ul{
@@ -48,114 +58,186 @@ gap:30px;
 nav ul li a{
 text-decoration:none;
 color:white;
+font-weight: 500;
 transition:0.3s;
 }
 
 nav ul li a:hover{
-color:#ff9900;
+color:var(--accent-orange);
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero{
 text-align:center;
-padding:100px 20px;
-background: linear-gradient(45deg,#2a1208,#ff6600,#000);
+padding:120px 20px;
+background: radial-gradient(circle at center, #2a1208 0%, #000 70%);
+border-bottom: 2px solid rgba(255,102,0,0.1);
 }
 
 .hero h1{
-font-size:60px;
-background: linear-gradient(45deg,#ffd700,#ff6600);
+font-size:70px;
+font-weight: 800;
+background: linear-gradient(45deg, var(--primary-gold), var(--accent-orange));
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
+text-shadow: 0 10px 20px rgba(0,0,0,0.5);
+letter-spacing: 2px;
 }
 
 .hero p{
-margin-top:15px;
-opacity:0.8;
+margin-top:10px;
+font-size: 1.1rem;
+letter-spacing: 1px;
+color: #bbb;
 }
 
 .btn{
 display:inline-block;
-margin-top:30px;
-padding:15px 40px;
-border-radius:40px;
-background:linear-gradient(45deg,#ff6600,#ffd700);
-color:white;
+margin-top:40px;
+padding:15px 45px;
+border-radius:50px;
+background:linear-gradient(45deg, var(--accent-orange), var(--primary-gold));
+color:black;
 text-decoration:none;
-font-weight:600;
-box-shadow:0 10px 30px rgba(255,140,0,0.5);
+font-weight:700;
+box-shadow:0 10px 40px rgba(255,102,0,0.4);
 transition:0.4s;
+text-transform: uppercase;
 }
 
 .btn:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
+box-shadow:0 15px 50px rgba(255,102,0,0.6);
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
-padding:80px 8%;
+padding:100px 8%;
 }
 
 h2{
-margin-bottom:30px;
-border-bottom:2px solid #ff6600;
-display:inline-block;
-padding-bottom:5px;
+font-size: 2.5rem;
+margin-bottom: 50px;
+position: relative;
+display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60%;
+    height: 4px;
+    background: var(--accent-orange);
+}
+
+/* ABOUT */
+.about-content {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    border-left: 5px solid var(--accent-orange);
 }
 
 /* SERVICES */
-.services{
-display:flex;
+.services-grid{
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 gap:30px;
-flex-wrap:wrap;
 }
 
 .card{
-flex:1;
-min-width:250px;
-background:#111;
-padding:30px;
-border-radius:15px;
+background:var(--card-bg);
+padding:40px;
+border-radius:20px;
+text-align: center;
 transition:0.4s;
-border:1px solid rgba(255,140,0,0.2);
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.card i {
+    font-size: 3rem;
+    color: var(--primary-gold);
+    margin-bottom: 20px;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 15px 35px rgba(255,140,0,0.4);
+transform:translateY(-15px);
+background: #1c1c1c;
+border-color: var(--accent-orange);
 }
 
-/* PORTFOLIO */
-.portfolio{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
+/* PORTFOLIO MOCKUPS */
+.portfolio-grid{
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap:25px;
 }
 
-.portfolio img{
+.portfolio-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.portfolio-item img{
 width:100%;
-max-width:350px;
-border-radius:15px;
-transition:0.4s;
+display: block;
+transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio img:hover{
-transform:scale(1.05);
+.portfolio-item:hover img{
+transform:scale(1.1) rotate(2deg);
+filter: brightness(0.4);
 }
 
-/* TESTIMONIAL */
-.testimonial{
-text-align:center;
-font-style:italic;
-opacity:0.8;
+.portfolio-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.4s;
+    text-align: center;
+    width: 100%;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+/* FLOATING WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 2000;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) rotate(15deg);
 }
 
 /* FOOTER */
 footer{
 text-align:center;
-padding:30px;
+padding:50px;
 background:#000;
-opacity:0.6;
+border-top: 1px solid rgba(255,255,255,0.1);
+color: #888;
 }
 </style>
 </head>
@@ -163,66 +245,90 @@ opacity:0.6;
 <body>
 
 <nav>
-<img src="logo.png" class="logo">
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#portfolio">Portfolio</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+    <div class="logo-text" style="font-weight: 800; color: var(--primary-gold); font-size: 1.5rem;">ARCH1N.IN</div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+    </ul>
 </nav>
 
 <section class="hero">
-<h1>ARCH1N</h1>
-<p>Website Developer | Video Editor | Logo Designer | Bhuj, Kutch</p>
-<a href="#" class="btn">Contact on WhatsApp</a>
+    <h1>ARCH1N</h1>
+    <p>Professional Website Developer | Video Editor | Logo Designer</p>
+    <p style="color: var(--primary-gold);"><i class="fas fa-map-marker-alt"></i> Bhuj, Kutch, Gujarat</p>
+    <a href="https://wa.me/919000000000" class="btn">Start Your Project</a>
 </section>
 
 <section id="about">
-<h2>About Me</h2>
-<p>I am ARUN GARVA, a professional website developer and designer delivering premium digital solutions worldwide.</p>
+    <h2>About Me</h2>
+    <div class="about-content">
+        <p>Hi, I am <strong>ARUN GARVA</strong>. I specialize in creating high-end digital experiences. From Bhuj, Kutch, I help clients worldwide with premium website development and cinematic branding solutions.</p>
+    </div>
 </section>
 
 <section id="services">
-<h2>My Services</h2>
-<div class="services">
-<div class="card">
-<h3>Website Development</h3>
-<p>High converting responsive websites.</p>
-</div>
-<div class="card">
-<h3>Video Editing</h3>
-<p>Instagram, YouTube & Social Media edits.</p>
-</div>
-<div class="card">
-<h3>Logo Design</h3>
-<p>Premium brand identity designs.</p>
-</div>
-</div>
+    <h2>My Services</h2>
+    <div class="services-grid">
+        <div class="card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Web Development</h3>
+            <p>Responsive, fast-loading, and SEO-friendly websites using modern frameworks.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-film"></i>
+            <h3>Video Editing</h3>
+            <p>Cinematic storytelling for YouTube, Instagram Reels, and Commercials.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-pen-nib"></i>
+            <h3>Logo Design</h3>
+            <p>Premium brand identities and vector logos that stand out from the crowd.</p>
+        </div>
+    </div>
 </section>
 
 <section id="portfolio">
-<h2>Portfolio</h2>
-<div class="portfolio">
-<img src="https://picsum.photos/400/250?1">
-<img src="https://picsum.photos/400/250?2">
-<img src="https://picsum.photos/400/250?3">
-</div>
+    <h2>My Portfolio</h2>
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="https://picsum.photos/600/400?1" alt="Web Project">
+            <div class="portfolio-overlay">
+                <h3>Modern Web UI</h3>
+                <p>Clean & Minimalist Design</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://picsum.photos/600/400?2" alt="Branding">
+            <div class="portfolio-overlay">
+                <h3>Golden Branding</h3>
+                <p>Premium Logo Concept</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://picsum.photos/600/400?3" alt="Video Project">
+            <div class="portfolio-overlay">
+                <h3>Cinematic Edit</h3>
+                <p>Post-Production Work</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section>
-<h2>Client Testimonials</h2>
-<p class="testimonial">"Amazing work! Highly recommend ARCH1N." – Client A</p>
+<section id="contact" style="text-align: center;">
+    <h2>Get In Touch</h2>
+    <p style="margin-bottom: 30px; opacity: 0.7;">Ready to bring your idea to life? Let's chat on WhatsApp.</p>
+    <a href="https://wa.me/919000000000" class="btn">Message Now</a>
 </section>
 
-<section id="contact">
-<h2>Contact Me</h2>
-<a href="#" class="btn">Contact on WhatsApp</a>
-</section>
+<a href="https://wa.me/919825928608" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 <footer>
-© 2026 Arch1n.in | All Rights Reserved
+    <p>© 2020 ARCH1N.IN | Designed by Arun Garva</p>
+    <p>Bhuj, Gujarat | All Rights Reserved</p>
 </footer>
 
 </body>
